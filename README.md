@@ -1,44 +1,4 @@
-# Ark UI components kit
+# ONEPERCMAN PORTFOLIO
 
-- [x] Color Picker
-- [x] Pin Input
-- [x] Rating Group
-- [x] Tags Input
-- [x] Accordion
-- [x] Avatar
-- [x] Button
-- [x] Button
-- [x] Carousel
-- [x] Checkbox
-- [x] Clipboard
-- [x] Collapsible
-- [x] Combobox
-- [x] Date Picker
-- [x] Dialog
-- [x] Editable
-- [x] Empty
-- [x] File Upload
-- [x] Hover Card
-- [x] Input
-- [x] Input
-- [x] Loader
-- [x] Menu
-- [x] Number Input
-- [x] Pagination
-- [x] Popover
-- [x] Progress
-- [x] QRCode
-- [x] Radio Group
-- [x] Segment Group
-- [x] Select
-- [x] SignaturePad
-- [x] Slider
-- [x] Splitter
-- [x] Switch
-- [x] Table
-- [x] Tabs
-- [x] Textarea
-- [x] Toast
-- [x] Toggle Group
-- [x] Tooltip
-- [x] Tree View
+🗂️ repo: https://github.com/onepercman/portfolio
+🟢 live demo: https://...

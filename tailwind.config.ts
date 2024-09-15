@@ -10,7 +10,7 @@ const config: Config = {
   darkMode: ["class", '[data-theme="dark"]'],
   theme: {
     extend: {
-      fontFamily: { sans: [...defaultTheme.fontFamily.sans] },
+      fontFamily: { sans: ["Rubik", ...defaultTheme.fontFamily.sans] },
       keyframes: {
         collapse: { from: { height: "0px" }, to: { height: "var(--height)" } },
       },

@@ -1,5 +1,4 @@
 import { Button } from "@/libs/atoms"
-import { Img } from "@/shared/components/img"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { FC } from "react"
 import { LuExternalLink, LuGithub, LuLinkedin, LuMail, LuSmartphone } from "react-icons/lu"
@@ -106,7 +105,7 @@ export const Hero: FC = () => {
         style={{ translateY: translateR, scale: scaleR }}
         className="absolute bottom-0 right-0 -z-10 aspect-square w-full overflow-hidden rounded-t-full sm:relative sm:rounded-full"
       >
-        <Img src="/myself.jpeg" className="h-full w-full rounded-t-full" />
+        <img src="/myself.jpeg" className="h-full w-full rounded-t-full" />
       </motion.div>
     </motion.section>
   )

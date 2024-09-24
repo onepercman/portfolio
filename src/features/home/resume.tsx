@@ -1,5 +1,4 @@
 import { Button } from "@/libs/atoms"
-import { Img } from "@/shared/components/img"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { FC, useRef } from "react"
 import { LuDownload, LuGithub, LuLinkedin, LuMail, LuQuote, LuSmartphone } from "react-icons/lu"
@@ -30,7 +29,7 @@ export const Resume: FC = () => {
         className="flex flex-col gap-6 md:flex-row"
       >
         <div className="flex w-full max-w-lg flex-none flex-col items-center gap-4">
-          <Img src="/myself.jpeg" className="h-80 w-80 rounded-full" />
+          <img src="/myself.jpeg" className="h-80 w-80 rounded-full" />
           <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-4xl font-semibold uppercase text-transparent">
             onepercman
           </div>

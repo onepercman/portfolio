@@ -2,7 +2,7 @@ import { Button } from "@/libs/atoms"
 import { Img } from "@/shared/components/img"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { FC, useRef } from "react"
-import { LuGithub, LuLinkedin, LuMail, LuQuote, LuSmartphone } from "react-icons/lu"
+import { LuDownload, LuGithub, LuLinkedin, LuMail, LuQuote, LuSmartphone } from "react-icons/lu"
 import { contact } from "./data"
 
 export const Resume: FC = () => {
@@ -38,7 +38,7 @@ export const Resume: FC = () => {
             <span className="font-bold">Frontend Engineer</span> based in <span className="font-bold">VN</span>
           </div>
           <a href={String(import.meta.env.VITE_PUBLIC_URL + "/resume.pdf").replaceAll("//", "/")} target="_blank">
-            <Button size="lg" color="primary">
+            <Button size="lg" color="primary" rightIcon={<LuDownload />}>
               Download Resume
             </Button>
           </a>

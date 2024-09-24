@@ -36,7 +36,7 @@ const config: Config = {
         primary: colorize(colors.red, "500", "50"),
         secondary: colors.gray[400],
         muted: colors.gray[700],
-        accent: colorize(colors.cyan, "500", "50"),
+        accent: colorize(colors.fuchsia, "500", "50"),
         default: colors.gray[800],
         component: colors.gray[900],
         invert: colors.black,

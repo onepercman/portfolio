@@ -3,19 +3,24 @@ import { Layout } from "@/features/root/layout"
 import { Empty } from "@/libs/atoms/empty"
 import { createBrowserRouter } from "react-router-dom"
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "*",
+          element: <Empty />,
+        },
+        {
+          index: true,
+          element: <Home />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        path: "*",
-        element: <Empty />,
-      },
-      {
-        index: true,
-        element: <Home />,
-      },
-    ],
+    basename: import.meta.env.VITE_PUBLIC_URL,
   },
-])
+)

@@ -1,4 +1,5 @@
 # ONEPERCMAN PORTFOLIO
 
-🗂️ repo: https://github.com/onepercman/portfolio
-🟢 live demo: https://...
+🗂️ Repo: https://github.com/onepercman/onepercman.github.io
+
+🟢 Live demo: https://onepercman.com

@@ -1,4 +1,4 @@
-name: Deploy onepercman portfolio
+name: Deploy
 
 on:
   push:
@@ -16,12 +16,17 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
 
       - name: Install pnpm
         run: |
           npm install -g pnpm
           pnpm install
+
+      - name: Configure Git user
+        run: |
+          git config --global user.email "onepercman@gmail.com"
+          git config --global user.name "onepercman"
 
       - name: Build the project
         run: pnpm run build

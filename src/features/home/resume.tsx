@@ -36,7 +36,7 @@ export const Resume: FC = () => {
           <div className="text-lg sm:text-xl">
             <span className="font-bold">Frontend Engineer</span> based in <span className="font-bold">VN</span>
           </div>
-          <a href={String(import.meta.env.VITE_PUBLIC_URL + "/resume.pdf").replaceAll("//", "/")} target="_blank">
+          <a href="/resume.pdf" target="_blank">
             <Button size="lg" color="primary" rightIcon={<LuDownload />}>
               Download Resume
             </Button>

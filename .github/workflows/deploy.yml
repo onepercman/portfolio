@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 20
+          node-version: "20"
           cache: "pnpm"
 
       - name: Install pnpm
@@ -26,11 +26,11 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm run build
+        run: pnpm build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.2
         with:
-          branch: main
+          branch: gh-pages
           folder: dist
           token: ${{ secrets.GITHUB_TOKEN }}

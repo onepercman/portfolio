@@ -6,7 +6,7 @@ export const Img = React.forwardRef<HTMLImageElement, React.ImgHTMLAttributes<HT
   { src, ...props },
   ref,
 ) {
-  const _src = src ? new URL(src, prefix).href : undefined
+  const _src = src ? String(prefix + src).replaceAll("//", "/") : undefined
 
   return <img ref={ref} src={_src} {...props} />
 })

@@ -32,6 +32,5 @@ jobs:
         run: pnpm run build
 
       - name: Deploy to GitHub Pages
-        run: pnpm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npx gh-pages -d dist -r "https://${{ secrets.GITHUB_TOKEN }}:x-oauth-basic@github.com/onepercman/portfolio.git"

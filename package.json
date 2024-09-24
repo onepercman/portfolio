@@ -11,7 +11,6 @@
     "staging": "vite --mode staging",
     "production": "vite --mode production",
     "build": "tsc && vite build",
-    "predeploy": "pnpm build",
     "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "lint": "eslint",

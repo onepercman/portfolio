@@ -26,9 +26,9 @@ export const Resume: FC = () => {
         style={{
           translateY: contentTransform,
         }}
-        className="flex flex-col gap-6 md:flex-row"
+        className="flex flex-col gap-6 xl:flex-row"
       >
-        <div className="flex w-full max-w-lg flex-none flex-col items-center gap-4">
+        <div className="flex w-full flex-none flex-col items-center gap-4 xl:max-w-lg">
           <img src="/myself.jpeg" className="h-80 w-80 rounded-full" />
           <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-4xl font-semibold uppercase text-transparent">
             onepercman
@@ -51,7 +51,7 @@ export const Resume: FC = () => {
             ensuring cross-browser compatibility. Adept at collaborating with cross-functional teams to deliver
             high-quality, scalable solutions.
           </div>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <a
               target="_blank"
               href={`tel:${contact.phone}`}
@@ -86,9 +86,11 @@ export const Resume: FC = () => {
                 </span>
                 <span className="text-lg font-medium sm:text-2xl">Years experience...</span>
               </div>
-              <div>
-                Hello there! My name is onepercman. I am a web frontend developer, and Im very passionate and dedicated
-                to my work.
+              <div className="text-xs sm:text-sm">
+                Hello! I'm onepercman, a web frontend developer with over 4 years of experience specializing in ReactJS.
+                I'm passionate about building responsive, high-performance applications that offer great user
+                experiences. Over the years, I've honed my skills in frontend technologies, ensuring that my projects
+                not only look visually appealing but also perform seamlessly across devices.
               </div>
             </div>
             <div className="space-y-6">
@@ -96,11 +98,13 @@ export const Resume: FC = () => {
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-3xl font-semibold text-transparent sm:text-6xl">
                   200+
                 </span>
-                <span className="text-lg font-medium sm:text-2xl">Project...</span>
+                <span className="text-lg font-medium sm:text-2xl">Project completed...</span>
               </div>
-              <div>
-                Hello there! My name is onepercman. I am a web frontend developer, and Im very passionate and dedicated
-                to my work.
+              <div className="text-xs sm:text-sm">
+                Having completed over 200 projects, I've gained extensive experience in delivering user-centric, robust
+                web applications. My work spans a wide range, from small business websites to large-scale platforms. I'm
+                always excited to take on new challenges, bringing innovative ideas to life through clean, maintainable
+                code.
               </div>
             </div>
           </div>

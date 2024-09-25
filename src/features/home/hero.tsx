@@ -42,11 +42,11 @@ export const Hero: FC = () => {
         <motion.div style={{ opacity: opacityDown }} className="text-lg sm:text-3xl">
           <span className="font-bold">Frontend Engineer</span> based in <span className="font-bold">VN</span>
         </motion.div>
-        <motion.div style={{ opacity: opacityDown }}>
+        <motion.a href="#resume" style={{ opacity: opacityDown }}>
           <Button size="lg" color="primary" rightIcon={<LuExternalLink />}>
             Work with me
           </Button>
-        </motion.div>
+        </motion.a>
         <motion.div style={{ opacity: opacityDown }} className="flex flex-col items-start gap-3">
           <motion.a
             initial={{ translateX: "10rem", opacity: 0 }}

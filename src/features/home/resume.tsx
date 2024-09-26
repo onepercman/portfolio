@@ -78,7 +78,7 @@ export const Resume: FC = () => {
             </a>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-4">
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-3xl font-semibold text-transparent sm:text-6xl">

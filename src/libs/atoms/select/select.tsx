@@ -35,7 +35,9 @@ const Item = withSlot(Select.Item, "item")
 const ItemText = withSlot(Select.ItemText, "itemText")
 const ItemIndicator = withSlot(Select.ItemIndicator, "itemIndicator")
 
-export interface SelectProps<T extends CollectionItem> extends SelectRootProps<T>, ComposedTVProps<typeof select> {
+export interface SelectProps<T extends CollectionItem>
+  extends SelectRootProps<T>,
+    ComposedTVProps<typeof select> {
   trigger?: ButtonProps
   valueText?: SelectValueTextProps
 }
@@ -45,14 +47,27 @@ export interface Select extends ForwardedRefComponent {
 }
 
 function _bootstrap<T extends CollectionItem>(
-  render: (props: SelectProps<T>, ref: React.ForwardedRef<HTMLDivElement>) => React.ReactElement | null,
+  render: (
+    props: SelectProps<T>,
+    ref: React.ForwardedRef<HTMLDivElement>,
+  ) => React.ReactElement | null,
 ) {
-  return React.forwardRef<HTMLDivElement, SelectProps<T>>(render) as unknown as Select
+  return React.forwardRef<HTMLDivElement, SelectProps<T>>(
+    render,
+  ) as unknown as Select
 }
 
-export const CustomRoot = _bootstrap(function ({ children, positioning, trigger, valueText, ...props }, ref) {
+export const CustomRoot = _bootstrap(function (
+  { children, positioning, trigger, valueText, ...props },
+  ref,
+) {
   return (
-    <Root ref={ref} positioning={{ sameWidth: true, ...positioning }} unmountOnExit {...props}>
+    <Root
+      ref={ref}
+      positioning={{ sameWidth: true, ...positioning }}
+      unmountOnExit
+      {...props}
+    >
       <Control>
         <Trigger
           asChild

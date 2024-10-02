@@ -1,7 +1,14 @@
 import { Button } from "@/libs/atoms"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { FC, useRef } from "react"
-import { LuDownload, LuGithub, LuLinkedin, LuMail, LuQuote, LuSmartphone } from "react-icons/lu"
+import {
+  LuDownload,
+  LuGithub,
+  LuLinkedin,
+  LuMail,
+  LuQuote,
+  LuSmartphone,
+} from "react-icons/lu"
 import { contact } from "./data"
 
 export const Resume: FC = () => {
@@ -12,12 +19,27 @@ export const Resume: FC = () => {
     offset: ["start end", "end start"],
   })
 
-  const headingTransform = useTransform(scrollYProgress, [0.4, 1], ["0%", "-200%"])
-  const contentTransform = useTransform(scrollYProgress, [0.4, 1], ["0%", "-30rem"])
+  const headingTransform = useTransform(
+    scrollYProgress,
+    [0.4, 1],
+    ["0%", "-200%"],
+  )
+  const contentTransform = useTransform(
+    scrollYProgress,
+    [0.4, 1],
+    ["0%", "-30rem"],
+  )
 
   return (
-    <section ref={section} id="resume" className="min-h-screen space-y-14 bg-component p-6 sm:p-8">
-      <motion.div style={{ translateX: headingTransform }} className="flex flex-col items-start gap-4">
+    <section
+      ref={section}
+      id="resume"
+      className="min-h-screen space-y-14 bg-component p-6 sm:p-8"
+    >
+      <motion.div
+        style={{ translateX: headingTransform }}
+        className="flex flex-col items-start gap-4"
+      >
         <div className="font-medium italic">Nice to meet you!</div>
         <div className="text-3xl font-semibold sm:text-5xl">WELCOME TO...</div>
       </motion.div>
@@ -34,7 +56,8 @@ export const Resume: FC = () => {
             onepercman
           </div>
           <div className="text-lg sm:text-xl">
-            <span className="font-bold">Frontend Engineer</span> based in <span className="font-bold">VN</span>
+            <span className="font-bold">Frontend Engineer</span> based in{" "}
+            <span className="font-bold">VN</span>
           </div>
           <a href="/resume.pdf" target="_blank">
             <Button size="lg" color="primary" rightIcon={<LuDownload />}>
@@ -45,11 +68,13 @@ export const Resume: FC = () => {
 
         <div className="flex grow flex-col gap-8">
           <div className="text-justify">
-            Skilled ReactJS Frontend Developer with 4 years of experience in building dynamic and responsive web
-            applications. Proficient in JavaScript, TypeScript, and modern frontend technologies, including Redux, React
-            Hooks, and Next.js. Strong expertise in creating intuitive user interfaces, optimizing performance, and
-            ensuring cross-browser compatibility. Adept at collaborating with cross-functional teams to deliver
-            high-quality, scalable solutions.
+            Skilled ReactJS Frontend Developer with 4 years of experience in
+            building dynamic and responsive web applications. Proficient in
+            JavaScript, TypeScript, and modern frontend technologies, including
+            Redux, React Hooks, and Next.js. Strong expertise in creating
+            intuitive user interfaces, optimizing performance, and ensuring
+            cross-browser compatibility. Adept at collaborating with
+            cross-functional teams to deliver high-quality, scalable solutions.
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <a
@@ -68,11 +93,19 @@ export const Resume: FC = () => {
               <LuMail />
               <span>{contact.email}</span>
             </a>
-            <a target="_blank" href={contact.github} className="inline-flex items-center gap-2 whitespace-nowrap">
+            <a
+              target="_blank"
+              href={contact.github}
+              className="inline-flex items-center gap-2 whitespace-nowrap"
+            >
               <LuGithub />
               <span>@onepercman</span>
             </a>
-            <a target="_blank" href={contact.linkedin} className="inline-flex items-center gap-2 whitespace-nowrap">
+            <a
+              target="_blank"
+              href={contact.linkedin}
+              className="inline-flex items-center gap-2 whitespace-nowrap"
+            >
               <LuLinkedin />
               <span>@onepercman</span>
             </a>
@@ -84,13 +117,18 @@ export const Resume: FC = () => {
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-3xl font-semibold text-transparent sm:text-6xl">
                   4+
                 </span>
-                <span className="text-lg font-medium sm:text-2xl">Years experience...</span>
+                <span className="text-lg font-medium sm:text-2xl">
+                  Years experience...
+                </span>
               </div>
               <div className="text-xs sm:text-sm">
-                Hello! I'm onepercman, a web frontend developer with over 4 years of experience specializing in ReactJS.
-                I'm passionate about building responsive, high-performance applications that offer great user
-                experiences. Over the years, I've honed my skills in frontend technologies, ensuring that my projects
-                not only look visually appealing but also perform seamlessly across devices.
+                Hello! I'm onepercman, a web frontend developer with over 4
+                years of experience specializing in ReactJS. I'm passionate
+                about building responsive, high-performance applications that
+                offer great user experiences. Over the years, I've honed my
+                skills in frontend technologies, ensuring that my projects not
+                only look visually appealing but also perform seamlessly across
+                devices.
               </div>
             </div>
             <div className="space-y-6">
@@ -98,13 +136,17 @@ export const Resume: FC = () => {
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-3xl font-semibold text-transparent sm:text-6xl">
                   200+
                 </span>
-                <span className="text-lg font-medium sm:text-2xl">Project completed...</span>
+                <span className="text-lg font-medium sm:text-2xl">
+                  Project completed...
+                </span>
               </div>
               <div className="text-xs sm:text-sm">
-                Having completed over 200 projects, I've gained extensive experience in delivering user-centric, robust
-                web applications. My work spans a wide range, from small business websites to large-scale platforms. I'm
-                always excited to take on new challenges, bringing innovative ideas to life through clean, maintainable
-                code.
+                Having completed over 200 projects, I've gained extensive
+                experience in delivering user-centric, robust web applications.
+                My work spans a wide range, from small business websites to
+                large-scale platforms. I'm always excited to take on new
+                challenges, bringing innovative ideas to life through clean,
+                maintainable code.
               </div>
             </div>
           </div>
@@ -112,7 +154,8 @@ export const Resume: FC = () => {
           <div className="inline-flex gap-4 rounded-2xl bg-default p-6">
             <LuQuote size={80} className="flex-none text-secondary" />
             <div className="grow text-2xl font-medium">
-              "Crafting seamless user experiences with code that speaks simplicity, performance, and innovation."
+              "Crafting seamless user experiences with code that speaks
+              simplicity, performance, and innovation."
             </div>
           </div>
         </div>

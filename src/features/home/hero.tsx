@@ -1,7 +1,13 @@
 import { Button } from "@/libs/atoms"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { FC } from "react"
-import { LuExternalLink, LuGithub, LuLinkedin, LuMail, LuSmartphone } from "react-icons/lu"
+import {
+  LuExternalLink,
+  LuGithub,
+  LuLinkedin,
+  LuMail,
+  LuSmartphone,
+} from "react-icons/lu"
 import { contact } from "./data"
 
 export const Hero: FC = () => {
@@ -29,25 +35,39 @@ export const Hero: FC = () => {
       >
         <div className="flex flex-col text-4xl font-semibold uppercase sm:text-6xl">
           <motion.span style={{ opacity: opacityDown }}>My name</motion.span>
-          <motion.span style={{ opacity: opacityDown }} className="text-2xl sm:text-4xl">
+          <motion.span
+            style={{ opacity: opacityDown }}
+            className="text-2xl sm:text-4xl"
+          >
             is
           </motion.span>
           <motion.span
-            style={{ translateX: translateL, translateY: translateYL, scale: scaleL }}
+            style={{
+              translateX: translateL,
+              translateY: translateYL,
+              scale: scaleL,
+            }}
             className="text-transparent [-webkit-text-stroke:_2px_#ef4444]"
           >
             onepercman
           </motion.span>
         </div>
-        <motion.div style={{ opacity: opacityDown }} className="text-lg sm:text-3xl">
-          <span className="font-bold">Frontend Engineer</span> based in <span className="font-bold">VN</span>
+        <motion.div
+          style={{ opacity: opacityDown }}
+          className="text-lg sm:text-3xl"
+        >
+          <span className="font-bold">Frontend Engineer</span> based in{" "}
+          <span className="font-bold">VN</span>
         </motion.div>
         <motion.a href="#resume" style={{ opacity: opacityDown }}>
           <Button size="lg" color="primary" rightIcon={<LuExternalLink />}>
             Work with me
           </Button>
         </motion.a>
-        <motion.div style={{ opacity: opacityDown }} className="flex flex-col items-start gap-3">
+        <motion.div
+          style={{ opacity: opacityDown }}
+          className="flex flex-col items-start gap-3"
+        >
           <motion.a
             initial={{ translateX: "10rem", opacity: 0 }}
             animate={{ translateX: "0", opacity: 1 }}

@@ -1,4 +1,10 @@
-import { CollectionItem, Combobox, ComboboxRootProps, createListCollection, Portal } from "@ark-ui/react"
+import {
+  CollectionItem,
+  Combobox,
+  ComboboxRootProps,
+  createListCollection,
+  Portal,
+} from "@ark-ui/react"
 import React from "react"
 import { LuChevronsUpDown } from "react-icons/lu"
 import { Input as AtomInput, InputProps } from "../input"
@@ -38,9 +44,14 @@ export interface Combobox extends ForwardedRefComponent {
 }
 
 function _bootstrap<T extends CollectionItem>(
-  render: (props: ComboboxProps<T>, ref: React.ForwardedRef<HTMLDivElement>) => React.ReactElement | null,
+  render: (
+    props: ComboboxProps<T>,
+    ref: React.ForwardedRef<HTMLDivElement>,
+  ) => React.ReactElement | null,
 ) {
-  return React.forwardRef<HTMLDivElement, ComboboxProps<T>>(render) as unknown as Combobox
+  return React.forwardRef<HTMLDivElement, ComboboxProps<T>>(
+    render,
+  ) as unknown as Combobox
 }
 
 export const CustomRoot = _bootstrap(function (
@@ -66,7 +77,12 @@ export const CustomRoot = _bootstrap(function (
   ref,
 ) {
   return (
-    <Root ref={ref} unmountOnExit positioning={{ sameWidth: true, ...positioning }} {...props}>
+    <Root
+      ref={ref}
+      unmountOnExit
+      positioning={{ sameWidth: true, ...positioning }}
+      {...props}
+    >
       <Control>
         <Input asChild>{renderInput({ placeholder })}</Input>
       </Control>

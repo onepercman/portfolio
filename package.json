@@ -36,7 +36,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@ark-ui/react": "^3.9.0",
+    "@ark-ui/react": "^4.1.0",
     "@testing-library/react": "^16.0.0",
     "@types/humps": "^2.0.6",
     "@types/node": "^22.5.0",

@@ -1,4 +1,4 @@
-import { Combobox, ComboboxCollectionItem, ComboboxRootProps, Portal } from "@ark-ui/react"
+import { CollectionItem, Combobox, ComboboxRootProps, createListCollection, Portal } from "@ark-ui/react"
 import React from "react"
 import { LuChevronsUpDown } from "react-icons/lu"
 import { Input as AtomInput, InputProps } from "../input"
@@ -26,7 +26,7 @@ const Item = withSlot(Combobox.Item, "item")
 const ItemText = withSlot(Combobox.ItemText, "itemText")
 const ItemIndicator = withSlot(Combobox.ItemIndicator, "itemIndicator")
 
-export interface ComboboxProps<T extends ComboboxCollectionItem>
+export interface ComboboxProps<T extends CollectionItem>
   extends ComboboxRootProps<T>,
     ComposedTVProps<typeof combobox> {
   placeholder?: string
@@ -34,10 +34,10 @@ export interface ComboboxProps<T extends ComboboxCollectionItem>
 }
 
 export interface Combobox extends ForwardedRefComponent {
-  <T extends ComboboxCollectionItem>(props: ComboboxProps<T>): React.ReactElement | null
+  <T extends CollectionItem>(props: ComboboxProps<T>): React.ReactElement | null
 }
 
-function _bootstrap<T extends ComboboxCollectionItem>(
+function _bootstrap<T extends CollectionItem>(
   render: (props: ComboboxProps<T>, ref: React.ForwardedRef<HTMLDivElement>) => React.ReactElement | null,
 ) {
   return React.forwardRef<HTMLDivElement, ComboboxProps<T>>(render) as unknown as Combobox
@@ -80,7 +80,7 @@ export const CustomRoot = _bootstrap(function (
 })
 
 export const Component = createNested(CustomRoot, {
-  Root,
+  Root: Root as Combobox,
   RootProvider,
   Context,
   ItemContext,
@@ -97,6 +97,7 @@ export const Component = createNested(CustomRoot, {
   Item,
   ItemText,
   ItemIndicator,
+  createListCollection,
 })
 
 Component.displayName = "Combobox"

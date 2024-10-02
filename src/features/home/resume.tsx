@@ -1,6 +1,5 @@
 import { Button } from "@/libs/atoms"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { FC, useRef } from "react"
+import { FC } from "react"
 import {
   LuDownload,
   LuGithub,
@@ -12,46 +11,19 @@ import {
 import { contact } from "./data"
 
 export const Resume: FC = () => {
-  const section = useRef<HTMLDivElement>(null)
-
-  const { scrollYProgress } = useScroll({
-    target: section,
-    offset: ["start end", "end start"],
-  })
-
-  const headingTransform = useTransform(
-    scrollYProgress,
-    [0.4, 1],
-    ["0%", "-200%"],
-  )
-  const contentTransform = useTransform(
-    scrollYProgress,
-    [0.4, 1],
-    ["0%", "-30rem"],
-  )
-
   return (
     <section
-      ref={section}
       id="resume"
       className="min-h-screen space-y-14 bg-component p-6 sm:p-8"
     >
-      <motion.div
-        style={{ translateX: headingTransform }}
-        className="flex flex-col items-start gap-4"
-      >
+      <div className="flex flex-col items-start gap-4">
         <div className="font-medium italic">Nice to meet you!</div>
         <div className="text-3xl font-semibold sm:text-5xl">WELCOME TO...</div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        style={{
-          translateY: contentTransform,
-        }}
-        className="flex flex-col gap-6 xl:flex-row"
-      >
+      <div className="flex flex-col gap-6 xl:flex-row">
         <div className="flex w-full flex-none flex-col items-center gap-4 xl:max-w-lg">
-          <img src="/myself.jpeg" className="h-80 w-80 rounded-full" />
+          <img src="/myself-2.png" className="h-80 w-80 rounded-full" />
           <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-4xl font-semibold uppercase text-transparent">
             onepercman
           </div>
@@ -159,7 +131,7 @@ export const Resume: FC = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }

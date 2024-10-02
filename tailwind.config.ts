@@ -49,7 +49,7 @@ const config: Config = {
       schemes: {},
     }),
     resetCSS({
-      html: "bg-background text-foreground",
+      html: "bg-background text-foreground scroll-smooth",
       "*": "scrollbar scrollbar-thumb-default scrollbar-thumb-rounded scrollbar-track-rounded scrollbar-track-transparent",
     }),
   ],

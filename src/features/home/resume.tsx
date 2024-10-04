@@ -26,7 +26,7 @@ export const Resume: FC = () => {
         <div className="flex w-full flex-none flex-col items-center gap-4 xl:max-w-lg">
           <img src="/myself-2.png" className="h-80 w-80 rounded-full" />
           <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-4xl font-semibold uppercase text-transparent">
-            Tran Duy Trung
+            Trung Tran Duy
           </div>
           <div>
             aka <span className="font-semibold text-primary">@onepercman</span>

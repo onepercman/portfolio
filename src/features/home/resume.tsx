@@ -55,7 +55,7 @@ export const Resume: FC = () => {
         </div>
 
         <div className="flex grow flex-col gap-8">
-          <div className="text-justify">
+          <p className="text-justify">
             Skilled ReactJS Frontend Developer with 4 years of experience in
             building dynamic and responsive web applications. Proficient in
             JavaScript, TypeScript, and modern frontend technologies, including
@@ -63,7 +63,7 @@ export const Resume: FC = () => {
             intuitive user interfaces, optimizing performance, and ensuring
             cross-browser compatibility. Adept at collaborating with
             cross-functional teams to deliver high-quality, scalable solutions.
-          </div>
+          </p>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <a
               target="_blank"

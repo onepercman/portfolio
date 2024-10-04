@@ -42,7 +42,7 @@ export const Hero: FC = () => {
           >
             is
           </motion.span>
-          <motion.span
+          <motion.h1
             style={{
               translateX: translateL,
               translateY: translateYL,
@@ -51,7 +51,7 @@ export const Hero: FC = () => {
             className="text-transparent [-webkit-text-stroke:_2px_#ef4444]"
           >
             onepercman
-          </motion.span>
+          </motion.h1>
         </div>
         <motion.div
           style={{ opacity: opacityDown }}

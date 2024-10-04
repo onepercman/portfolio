@@ -25,17 +25,32 @@ export const Resume: FC = () => {
         <div className="flex w-full flex-none flex-col items-center gap-4 xl:max-w-lg">
           <img src="/myself-2.png" className="h-80 w-80 rounded-full" />
           <div className="bg-gradient-to-r from-primary to-accent bg-clip-text text-4xl font-semibold uppercase text-transparent">
-            onepercman
+            Tran Duy Trung
+          </div>
+          <div>
+            aka <span className="font-semibold text-primary">@onepercman</span>
           </div>
           <div className="text-lg sm:text-xl">
             <span className="font-bold">Frontend Engineer</span> based in{" "}
             <span className="font-bold">VN</span>
           </div>
-          <a href="/resume.pdf" target="_blank">
-            <Button size="lg" color="primary" rightIcon={<LuDownload />}>
-              Download Resume
-            </Button>
-          </a>
+          <div className="inline-flex items-center gap-4">
+            <a href="/resume.pdf" target="_blank">
+              <Button size="lg" color="primary" rightIcon={<LuDownload />}>
+                Download Resume
+              </Button>
+            </a>
+            <a href="#experience">
+              <Button
+                size="lg"
+                variant="outlined"
+                color="primary"
+                rightIcon={<LuDownload />}
+              >
+                See my experience
+              </Button>
+            </a>
+          </div>
         </div>
 
         <div className="flex grow flex-col gap-8">

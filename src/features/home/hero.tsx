@@ -8,6 +8,7 @@ import {
   LuMail,
   LuSmartphone,
 } from "react-icons/lu"
+import { Typewriter } from "react-simple-typewriter"
 import { contact } from "./data"
 
 export const Hero: FC = () => {
@@ -56,8 +57,14 @@ export const Hero: FC = () => {
           style={{ opacity: opacityDown }}
           className="text-lg sm:text-3xl"
         >
-          <span className="font-bold">Frontend Engineer</span> based in{" "}
-          <span className="font-bold">VN</span>
+          <span className="font-semibold">
+            <Typewriter
+              words={["Frontend Engineer", "Web3 Enthusiast"]}
+              cursor
+              loop
+            />
+          </span>
+          based in <span className="font-bold">VN</span>
         </motion.div>
         <motion.a href="#resume" style={{ opacity: opacityDown }}>
           <Button size="lg" color="primary" rightIcon={<LuExternalLink />}>

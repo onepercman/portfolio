@@ -11,7 +11,7 @@ export const button = tv({
   variants: {
     size: {
       xs: "[--button-size:1.25rem] px-2 text-xs",
-      sm: "[--button-size:1.5rem] px-2 text-sm",
+      sm: "[--button-size:1.5rem] px-2 text-xs",
       md: "[--button-size:2.25rem] px-4 text-sm",
       lg: "[--button-size:2.75rem] px-4",
     },

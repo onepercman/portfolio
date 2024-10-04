@@ -22,7 +22,7 @@ export const Hero: FC = () => {
   const scaleR = useTransform(scrollYProgress, [0, 1], ["100%", "0%"])
 
   return (
-    <motion.section className="relative grid min-h-screen grid-cols-1 items-center gap-4 overflow-hidden p-6 sm:grid-cols-2 sm:p-8">
+    <motion.section className="relative grid min-h-screen grid-cols-1 items-center gap-4 overflow-hidden p-6 sm:grid-cols-2 sm:p-16">
       <motion.div
         initial={{ translateX: "-100%" }}
         animate={{ translateX: "0" }}

@@ -1,6 +1,7 @@
 import { Button } from "@/libs/atoms"
 import { FC } from "react"
 import {
+  LuArrowRight,
   LuDownload,
   LuGithub,
   LuLinkedin,
@@ -45,7 +46,7 @@ export const Resume: FC = () => {
                 size="lg"
                 variant="outlined"
                 color="primary"
-                rightIcon={<LuDownload />}
+                rightIcon={<LuArrowRight />}
               >
                 See my experience
               </Button>
